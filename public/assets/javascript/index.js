@@ -12,13 +12,15 @@ $(document).ready(function() {
 
       $('<div/>', {
         class: 'panel-heading',
-        id: 'heading' + i
+        id: 'heading' + i,
+        style: "background-color: #a1151d; padding-bottom: 15px;"
       }).appendTo('#panel' + i);
 
       $('<a/>', {
         target: '_blank',
         href: data[i].link,
-        text: data[i].title
+        text: data[i].title,
+        style: "color: white; font-weight: bold; font-size: 18px;"
       }).appendTo('#heading' + i);
 
       $('<button/>', {
@@ -26,7 +28,8 @@ $(document).ready(function() {
         id: 'save' + i,
         class: 'save-button btn-primary btn',
         value: data[i]._id,
-        text: "Save"
+        text: "Save",
+        style: "background-color: #2b2b2b; position: absolute; right: 25%;"
       }).appendTo('#heading' + i);
       
       $('<button/>', {
@@ -34,7 +37,8 @@ $(document).ready(function() {
         id: 'delete' + i,
         class: 'delete-button btn-danger btn',
         value: data[i]._id,
-        text: "Delete"
+        text: "Delete",
+        style: "background-color: #2b2b2b; position: absolute; right: 16%;"
       }).appendTo('#heading' + i);
 
       $('<div/>', {

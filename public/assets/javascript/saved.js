@@ -13,13 +13,15 @@ $(document).ready(function() {
             
                 $('<div/>', {
                     class: 'panel-heading',
-                    id: 'heading' + i
+                    id: 'heading' + i,
+                    style: "background-color: #a1151d; padding-bottom: 15px;"
                 }).appendTo('#panel' + i);
                 
                 $('<a/>', {
                     target: '_blank',
                     href: data[i].link,
-                    text: data[i].title
+                    text: data[i].title,
+                    style: "color: white; font-weight: bold; font-size: 18px;"
                 }).appendTo('#heading' + i);
                 
                 $('<button/>', {
@@ -27,7 +29,8 @@ $(document).ready(function() {
                     id: 'remove' + i,
                     class: 'remove-button btn-danger btn',
                     value: data[i]._id,
-                    text: "Remove"
+                    text: "Remove",
+                    style: "background-color: #2b2b2b; position: absolute; right: 16%;"
                 }).appendTo('#heading' + i);
                 
                 $('<div/>', {
